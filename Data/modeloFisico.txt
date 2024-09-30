@@ -1,0 +1,26 @@
+create database plustarefas;
+
+use plustarefas;
+
+CREATE TABLE usuarios (
+    idusuario INTEGER AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(45) NOT NULL,
+    nome VARCHAR(55) NOT NULL
+);
+
+CREATE TABLE tarefas (
+    idtarefa INTEGER AUTO_INCREMENT PRIMARY KEY,
+    descricao VARCHAR(255) NOT NULL,
+    setor VARCHAR(25) NOT NULL,
+    prioridade VARCHAR(25) NOT NULL,
+    datacadastro DATE NOT NULL,
+    status VARCHAR(45) NOT NULL,
+    fk_usuarios INTEGER
+);
+ 
+ALTER TABLE tarefas ADD CONSTRAINT FK_tarefas_2
+    FOREIGN KEY (fk_usuarios)
+    REFERENCES usuarios (idusuario)
+    ON DELETE CASCADE;
+    
+select * from tarefas;

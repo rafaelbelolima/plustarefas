@@ -1,0 +1,20 @@
+# Comandos Simples Github
+
+cd "documents/"
+
+git init
+
+git branch -m main
+
+git config --global user.email "ti.raphaelbello@gmail.com"
+
+git add .
+
+git commit -m ""
+
+git remote add origin https://github.com/rafaelbelolima/*******.git
+
+git push -u --forcer origin main
+
+
+# Comandos Simples NPM NodeJs
